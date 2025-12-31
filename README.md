@@ -27,6 +27,8 @@ npm create vite@latest . -- --template react-ts
         - 5ci: Latests jsdom uses CommonJS (our project only supports ES6). Install jsdom@22 which uses ES6 modules
     - 5d: Add test setup file, update vite config throughout
     - 5e: Install user-event
+6. Install react-router-dom
+7. Configure path aliasing (with vite)
 
 ```bash
 # Run tests
