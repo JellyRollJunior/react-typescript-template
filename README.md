@@ -8,6 +8,8 @@ My personal template for Typescript React projects
 - React Router
 - TailwindCSS
 - Prettier Config
+- Path Aliasing
+    - @: './src'
 
 ## Tutorial
 
