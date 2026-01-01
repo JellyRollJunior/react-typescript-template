@@ -13,9 +13,9 @@ My personal template for Typescript React Express projects
         - @: './src'
     - Zod
 - Server
-    - Express, Zod
+    - Express, Zod, cors
     - Dev: Typescript @types/node @types/express
-    - Dev: Nodemon ts-node
+    - Dev: Nodemon ts-node dotenv
     - Build, start, dev scripts
 
 ## Tutorial - Client
@@ -57,7 +57,7 @@ $ npm init -y
 2. Install runtime dependencies
 
 ```bash
-$ npm install express
+$ npm install express cors zod
 ```
 
 3. Install dev dependencies Typescript and node/express types
@@ -79,7 +79,7 @@ $ npx tsc --init
 ```bash
 # nodemon: building our TS automatically on file change
 # ts-node: (nodejs interpreter for typescript)
-$ npm install -D nodemon ts-node
+$ npm install -D nodemon ts-node dotenv
 
 # now we can watch for file changes
 $ nodemon ./src/server.ts
