@@ -1,22 +1,28 @@
-# Typescript React Template
+# Typescript React Express Template
 
-My personal template for Typescript React projects
+My personal template for Typescript React Express projects
 
 #### Includes
 
-- Vite Typescript React template
-- React Router
-- TailwindCSS
-- Prettier Config
-- Path Aliasing
-    - @: './src'
+- Client
+    - Vite Typescript React template
+    - React Router
+    - TailwindCSS
+    - Prettier Config
+    - Path Aliasing
+        - @: './src'
+- Server
+    - express
+    - dev: typescript @types/node @types/express
+    - dev: nodemon ts-node
+    - build, start, dev scripts
 
-## Tutorial
+## Tutorial - Client
 
 1. Create base react typescript app with Vite
 
 ```bash
-npm create vite@latest . -- --template react-ts
+$ npm create vite@latest . -- --template react-ts
 ```
 
 2. Install TailwindCSS with Vite: [Link](https://tailwindcss.com/docs/installation/using-vite)
@@ -35,4 +41,55 @@ npm create vite@latest . -- --template react-ts
 ```bash
 # Run tests
 $ npm run test
+```
+
+## Tutorial - Server
+
+Reference: [Link](https://www.youtube.com/watch?v=Be7X6QJusJA)
+
+1. Init npm
+
+```bash
+$ npm init -y
+```
+
+2. Install runtime dependencies
+
+```bash
+$ npm install express
+```
+
+3. Install dev dependencies Typescript and node/express types
+
+```bash
+# remember: TS is only for development. You run the JS the tsc compiler spits out
+$ npm install -D typescript @types/node @types/express
+```
+
+4. Init Typescript config and select options for tsconfig.json
+
+```bash
+$ npx tsc --init
+```
+
+5. Create build / start script
+6. Install nodemon & ts-node
+
+```bash
+# nodemon: building our TS automatically on file change
+# ts-node: (nodejs interpreter for typescript)
+$ npm install -D nodemon ts-node
+
+# now we can watch for file changes
+$ nodemon ./src/server.ts
+```
+
+7. Production build procedure
+```bash
+# compile our TS into JS
+# runs: npx tsc --build 
+$ npm run build
+
+# run built files
+$ node ./dist/server.js
 ```
