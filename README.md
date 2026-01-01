@@ -97,7 +97,3 @@ $ node ./dist/server.js
 ```
 
 7. Configure path aliasing
-
-```bash
-$ npm install -D tsconfig-paths
-```
